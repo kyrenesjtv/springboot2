@@ -17,8 +17,7 @@
     </select>
 
     <select id="getAllUsersCount" resultType="java.lang.Integer">
-        select COUNT (*)
-        <include refid="Base_Column_List"/>
+        select COUNT(*)
         from tb_user
     </select>
 
