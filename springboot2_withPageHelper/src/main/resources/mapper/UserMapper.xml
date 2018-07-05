@@ -16,6 +16,12 @@
         from tb_user
     </select>
 
+    <select id="getAllUsersCount" resultType="java.lang.Integer">
+        select COUNT (*)
+        <include refid="Base_Column_List"/>
+        from tb_user
+    </select>
+
     <select id="getUserByID" resultMap="BaseResultMap" parameterType="java.lang.Integer">
         select
         <include refid="Base_Column_List"/>

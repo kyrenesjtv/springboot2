@@ -58,4 +58,6 @@ public interface IUserService {
      * @return
      */
     PageBean<User> getAllListUsers(int pageNum, int pageSize);
+
+
 }

@@ -50,7 +50,8 @@ public class UserServiceIMPL implements IUserService {
         //使用分页插件,核心代码就这一行
         PageHelper.startPage(pageNum, pageSize);
         List<User> allUsers = userDAO.getAllUsers();
-        PageBean<User> pageData = new PageBean<>(pageNum, pageSize, allUsers.size());
+        int allUsersCount = userDAO.getAllUsersCount();
+        PageBean<User> pageData = new PageBean<>(pageNum, pageSize, allUsersCount);
         pageData.setItems(allUsers);
         // 获取
 //       userDAO.getAllUsers();

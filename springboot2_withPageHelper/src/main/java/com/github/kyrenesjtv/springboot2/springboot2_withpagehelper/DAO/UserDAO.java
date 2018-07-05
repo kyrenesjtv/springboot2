@@ -49,4 +49,11 @@ public interface UserDAO {
      * @return
      */
     int insertUser(User user);
+
+    /**
+     * 获取所有用户的total
+     *
+     * @return
+     */
+    int getAllUsersCount();
 }
