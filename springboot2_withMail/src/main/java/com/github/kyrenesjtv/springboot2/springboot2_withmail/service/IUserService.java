@@ -1,8 +1,9 @@
-package com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.service;
+package com.github.kyrenesjtv.springboot2.springboot2_withmail.service;
 
 
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.po.User;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.dto.PageBean;
+
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.dto.PageBean;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.po.User;
 
 import java.util.List;
 

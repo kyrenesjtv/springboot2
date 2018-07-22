@@ -1,8 +1,8 @@
-package com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.controller;
+package com.github.kyrenesjtv.springboot2.springboot2_withmail.controller;
 
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.po.User;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.service.impl.UserServiceIMPL;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.dto.PageBean;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.dto.PageBean;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.po.User;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.service.impl.UserServiceIMPL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

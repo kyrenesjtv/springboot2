@@ -1,9 +1,9 @@
-package com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.service.impl;
+package com.github.kyrenesjtv.springboot2.springboot2_withmail.service.impl;
 
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.DAO.UserDAO;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.po.User;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.service.IUserService;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.dto.PageBean;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.DAO.UserDAO;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.dto.PageBean;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.po.User;
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.service.IUserService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

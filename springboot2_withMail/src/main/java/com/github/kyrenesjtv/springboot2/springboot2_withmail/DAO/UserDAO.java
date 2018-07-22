@@ -1,8 +1,8 @@
-package com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.service;
+package com.github.kyrenesjtv.springboot2.springboot2_withmail.DAO;
 
 
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.po.User;
-import com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.dto.PageBean;
+
+import com.github.kyrenesjtv.springboot2.springboot2_withmail.po.User;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * @Author: wanglin
  * @CreateDate: 2018/6/21 18:21
  */
-public interface IUserService {
+public interface UserDAO {
     /**
      * 返回所有的users
      *
@@ -52,12 +52,9 @@ public interface IUserService {
     int insertUser(User user);
 
     /**
-     * 分页user
-     * @param pageNum
-     * @param pageSize
+     * 获取所有用户的total
+     *
      * @return
      */
-    PageBean<User> getAllListUsers(int pageNum, int pageSize);
-
-
+    int getAllUsersCount();
 }

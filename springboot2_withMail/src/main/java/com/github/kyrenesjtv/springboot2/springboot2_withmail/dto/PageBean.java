@@ -1,4 +1,4 @@
-package com.github.kyrenesjtv.springboot2.springboot2_withpagehelper.vo;
+package com.github.kyrenesjtv.springboot2.springboot2_withmail.dto;
 
 import java.util.List;
 
