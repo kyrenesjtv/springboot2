@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
@@ -23,7 +24,7 @@ public class PropertyUtil {
             if(is == null){
                 is = PropertyUtil.class.getClassLoader().getResourceAsStream(propertyFile);
             }
-            properties.load(is);
+            properties.load(new InputStreamReader(is, "utf-8"));
         } catch (IOException e) {
             LOGGER.info(e.getMessage());
             e.printStackTrace();
