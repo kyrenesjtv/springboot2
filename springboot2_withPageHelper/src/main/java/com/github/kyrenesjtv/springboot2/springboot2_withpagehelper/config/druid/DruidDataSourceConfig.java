@@ -11,6 +11,8 @@ import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -97,5 +99,13 @@ public class DruidDataSourceConfig implements EnvironmentAware {
         //beanNameAutoProxyCreator.setBeanNames("sysRoleMapper","loginController");
         beanNameAutoProxyCreator.setInterceptorNames("druid-stat-interceptor");
         return beanNameAutoProxyCreator;
+    }
+    /**
+     * 事务管理
+     * @return
+     */
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        return new DataSourceTransactionManager(dataSource());
     }
 }
