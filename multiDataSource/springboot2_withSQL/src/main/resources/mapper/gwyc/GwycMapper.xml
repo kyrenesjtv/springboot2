@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.kyrenesjtv.springboot2.springboot2_withsql.DAO.gwyc.GwycDAO">
+
+    <insert id="insertMonCarApplyInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarApplyInfo">
+        insert into mon_car_apply_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="apply_name_id != null" >
+                apply_name_id,
+            </if>
+            <if test="apply_car_id != null" >
+                apply_car_id,
+            </if>
+            <if test="apply_driver_id != null" >
+                apply_driver_id,
+            </if>
+            <if test="apply_name_phone != null" >
+                apply_name_phone,
+            </if>
+            <if test="apply_man_num != null" >
+                apply_man_num,
+            </if>
+            <if test="apply_time != null" >
+                apply_time,
+            </if>
+            <if test="apply_type != null" >
+                apply_type,
+            </if>
+            <if test="apply_state != null" >
+                apply_state,
+            </if>
+            <if test="apply_flow_state != null" >
+                apply_flow_state,
+            </if>
+            <if test="apply_dept_id != null" >
+                apply_dept_id,
+            </if>
+            <if test="apply_user_id != null" >
+                apply_user_id,
+            </if>
+            <if test="apply_use_range != null" >
+                apply_use_range,
+            </if>
+            <if test="apply_use_address != null" >
+                apply_use_address,
+            </if>
+            <if test="apply_destination != null" >
+                apply_destination,
+            </if>
+            <if test="apply_use_phone != null" >
+                apply_use_phone,
+            </if>
+            <if test="apply_use_time != null" >
+                apply_use_time,
+            </if>
+            <if test="apply_back_time != null" >
+                apply_back_time,
+            </if>
+            <if test="apply_out_km != null" >
+                apply_out_km,
+            </if>
+            <if test="apply_back_km != null" >
+                apply_back_km,
+            </if>
+            <if test="apply_income != null" >
+                apply_income,
+            </if>
+            <if test="apply_gl_subsidy != null" >
+                apply_gl_subsidy,
+            </if>
+            <if test="apply_cl_subsidy != null" >
+                apply_cl_subsidy,
+            </if>
+            <if test="apply_jb_subsidy != null" >
+                apply_jb_subsidy,
+            </if>
+            <if test="apply_toll != null" >
+                apply_toll,
+            </if>
+            <if test="apply_car_wash != null" >
+                apply_car_wash,
+            </if>
+            <if test="apply_car_park != null" >
+                apply_car_park,
+            </if>
+            <if test="apply_car_water != null" >
+                apply_car_water,
+            </if>
+            <if test="apply_other_money != null" >
+                apply_other_money,
+            </if>
+            <if test="apply_start_lm != null" >
+                apply_start_lm,
+            </if>
+            <if test="apply_end_lm != null" >
+                apply_end_lm,
+            </if>
+            <if test="apply_remark != null" >
+                apply_remark,
+            </if>
+            <if test="apply_ed_zaizhong != null" >
+                apply_ed_zaizhong,
+            </if>
+            <if test="apply_qy_id != null" >
+                apply_qy_id,
+            </if>
+            <if test="apply_sx_pople != null" >
+                apply_sx_pople,
+            </if>
+            <if test="apply_check_user_id != null" >
+                apply_check_user_id,
+            </if>
+            <if test="apply_check_yj != null" >
+                apply_check_yj,
+            </if>
+            <if test="apply_check_time != null" >
+                apply_check_time,
+            </if>
+            <if test="apply_bz != null" >
+                apply_bz,
+            </if>
+            <if test="yong_che_ren != null" >
+                yong_che_ren,
+            </if>
+            <if test="yong_che_zhiwei != null" >
+                yong_che_zhiwei,
+            </if>
+            <if test="yong_che_no != null" >
+                yong_che_no,
+            </if>
+            <if test="yong_che_xz != null" >
+                yong_che_xz,
+            </if>
+            <if test="gps_km != null" >
+                gps_km,
+            </if>
+            <if test="xs_km != null" >
+                xs_km,
+            </if>
+            <if test="return_time != null" >
+                return_time,
+            </if>
+            <if test="driverDDZT != null" >
+                driverDDZT,
+            </if>
+            <if test="currCheckPopleTime != null" >
+                currCheckPopleTime,
+            </if>
+            <if test="dispatchTime != null" >
+                dispatchTime,
+            </if>
+            <if test="currCheckPopleId != null" >
+                currCheckPopleId,
+            </if>
+            <if test="dispatchId != null" >
+                dispatchId,
+            </if>
+            <if test="backId != null" >
+                backId,
+            </if>
+            <if test="apply_shenqingCar_type != null" >
+                apply_shenqingCar_type,
+            </if>
+            <if test="apply_use_day != null" >
+                apply_use_day,
+            </if>
+            <if test="apply_car_food != null" >
+                apply_car_food,
+            </if>
+            <if test="quxiao_time != null" >
+                quxiao_time,
+            </if>
+            <if test="start_longitude != null" >
+                start_longitude,
+            </if>
+            <if test="start_latitude != null" >
+                start_latitude,
+            </if>
+            <if test="end_longitude != null" >
+                end_longitude,
+            </if>
+            <if test="end_latitude != null" >
+                end_latitude,
+            </if>
+            <if test="apply_fwzx_id != null" >
+                apply_fwzx_id,
+            </if>
+            <if test="apply_convoy_id != null" >
+                apply_convoy_id,
+            </if>
+            <if test="day_price != null" >
+                day_price,
+            </if>
+            <if test="halfDay_price != null" >
+                halfDay_price,
+            </if>
+            <if test="km_price != null" >
+                km_price,
+            </if>
+            <if test="is_look != null" >
+                is_look,
+            </if>
+            <if test="apply_ydyc_flag != null" >
+                apply_ydyc_flag,
+            </if>
+            <if test="ydyc_check_flag != null" >
+                ydyc_check_flag,
+            </if>
+            <if test="is_send != null" >
+                is_send,
+            </if>
+            <if test="ramarkto != null" >
+                ramarkto,
+            </if>
+            <if test="apply_stay != null" >
+                apply_stay,
+            </if>
+            <if test="rejoin_time != null" >
+                rejoin_time,
+            </if>
+            <if test="audit_pass_time != null" >
+                audit_pass_time,
+            </if>
+            <if test="audit_reject_time != null" >
+                audit_reject_time,
+            </if>
+            <if test="patcher_pass_time != null" >
+                patcher_pass_time,
+            </if>
+            <if test="patcher_reject_time != null" >
+                patcher_reject_time,
+            </if>
+            <if test="patcher_car_time != null" >
+                patcher_car_time,
+            </if>
+            <if test="cancel_time != null" >
+                cancel_time,
+            </if>
+            <if test="free_type != null" >
+                free_type,
+            </if>
+            <if test="printType != null" >
+                printType,
+            </if>
+            <if test="trip_type != null" >
+                trip_type,
+            </if>
+            <if test="old_apply_id != null" >
+                old_apply_id,
+            </if>
+            <if test="city_code != null" >
+                city_code,
+            </if>
+            <if test="trip_content != null" >
+                trip_content,
+            </if>
+            <if test="syna_time != null" >
+                syna_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_name_id != null" >
+                #{apply_name_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_car_id != null" >
+                #{apply_car_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_driver_id != null" >
+                #{apply_driver_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_name_phone != null" >
+                #{apply_name_phone,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_man_num != null" >
+                #{apply_man_num,jdbcType=INTEGER},
+            </if>
+            <if test="apply_time != null" >
+                #{apply_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="apply_type != null" >
+                #{apply_type,jdbcType=INTEGER},
+            </if>
+            <if test="apply_state != null" >
+                #{apply_state,jdbcType=INTEGER},
+            </if>
+            <if test="apply_flow_state != null" >
+                #{apply_flow_state,jdbcType=INTEGER},
+            </if>
+            <if test="apply_dept_id != null" >
+                #{apply_dept_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_user_id != null" >
+                #{apply_user_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_use_range != null" >
+                #{apply_use_range,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_use_address != null" >
+                #{apply_use_address,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_destination != null" >
+                #{apply_destination,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_use_phone != null" >
+                #{apply_use_phone,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_use_time != null" >
+                #{apply_use_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="apply_back_time != null" >
+                #{apply_back_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="apply_out_km != null" >
+                #{apply_out_km,jdbcType=DOUBLE},
+            </if>
+            <if test="apply_back_km != null" >
+                #{apply_back_km,jdbcType=DOUBLE},
+            </if>
+            <if test="apply_income != null" >
+                #{apply_income,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_gl_subsidy != null" >
+                #{apply_gl_subsidy,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_cl_subsidy != null" >
+                #{apply_cl_subsidy,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_jb_subsidy != null" >
+                #{apply_jb_subsidy,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_toll != null" >
+                #{apply_toll,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_car_wash != null" >
+                #{apply_car_wash,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_car_park != null" >
+                #{apply_car_park,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_car_water != null" >
+                #{apply_car_water,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_other_money != null" >
+                #{apply_other_money,jdbcType=DECIMAL},
+            </if>
+            <if test="apply_start_lm != null" >
+                #{apply_start_lm,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_end_lm != null" >
+                #{apply_end_lm,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_remark != null" >
+                #{apply_remark,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_ed_zaizhong != null" >
+                #{apply_ed_zaizhong,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_qy_id != null" >
+                #{apply_qy_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_sx_pople != null" >
+                #{apply_sx_pople,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_check_user_id != null" >
+                #{apply_check_user_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_check_yj != null" >
+                #{apply_check_yj,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_check_time != null" >
+                #{apply_check_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="apply_bz != null" >
+                #{apply_bz,jdbcType=VARCHAR},
+            </if>
+            <if test="yong_che_ren != null" >
+                #{yong_che_ren,jdbcType=VARCHAR},
+            </if>
+            <if test="yong_che_zhiwei != null" >
+                #{yong_che_zhiwei,jdbcType=VARCHAR},
+            </if>
+            <if test="yong_che_no != null" >
+                #{yong_che_no,jdbcType=VARCHAR},
+            </if>
+            <if test="yong_che_xz != null" >
+                #{yong_che_xz,jdbcType=VARCHAR},
+            </if>
+            <if test="gps_km != null" >
+                #{gps_km,jdbcType=DOUBLE},
+            </if>
+            <if test="xs_km != null" >
+                #{xs_km,jdbcType=DOUBLE},
+            </if>
+            <if test="return_time != null" >
+                #{return_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="driverDDZT != null" >
+                #{driverDDZT,jdbcType=INTEGER},
+            </if>
+            <if test="currCheckPopleTime != null" >
+                #{currCheckPopleTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="dispatchTime != null" >
+                #{dispatchTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="currCheckPopleId != null" >
+                #{currCheckPopleId,jdbcType=INTEGER},
+            </if>
+            <if test="dispatchId != null" >
+                #{dispatchId,jdbcType=INTEGER},
+            </if>
+            <if test="backId != null" >
+                #{backId,jdbcType=INTEGER},
+            </if>
+            <if test="apply_shenqingCar_type != null" >
+                #{apply_shenqingCar_type,jdbcType=INTEGER},
+            </if>
+            <if test="apply_use_day != null" >
+                #{apply_use_day,jdbcType=INTEGER},
+            </if>
+            <if test="apply_car_food != null" >
+                #{apply_car_food,jdbcType=DOUBLE},
+            </if>
+            <if test="quxiao_time != null" >
+                #{quxiao_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="start_longitude != null" >
+                #{start_longitude,jdbcType=VARCHAR},
+            </if>
+            <if test="start_latitude != null" >
+                #{start_latitude,jdbcType=VARCHAR},
+            </if>
+            <if test="end_longitude != null" >
+                #{end_longitude,jdbcType=VARCHAR},
+            </if>
+            <if test="end_latitude != null" >
+                #{end_latitude,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_fwzx_id != null" >
+                #{apply_fwzx_id,jdbcType=INTEGER},
+            </if>
+            <if test="apply_convoy_id != null" >
+                #{apply_convoy_id,jdbcType=INTEGER},
+            </if>
+            <if test="day_price != null" >
+                #{day_price,jdbcType=DOUBLE},
+            </if>
+            <if test="halfDay_price != null" >
+                #{halfDay_price,jdbcType=DOUBLE},
+            </if>
+            <if test="km_price != null" >
+                #{km_price,jdbcType=DOUBLE},
+            </if>
+            <if test="is_look != null" >
+                #{is_look,jdbcType=INTEGER},
+            </if>
+            <if test="apply_ydyc_flag != null" >
+                #{apply_ydyc_flag,jdbcType=INTEGER},
+            </if>
+            <if test="ydyc_check_flag != null" >
+                #{ydyc_check_flag,jdbcType=INTEGER},
+            </if>
+            <if test="is_send != null" >
+                #{is_send,jdbcType=INTEGER},
+            </if>
+            <if test="ramarkto != null" >
+                #{ramarkto,jdbcType=VARCHAR},
+            </if>
+            <if test="apply_stay != null" >
+                #{apply_stay,jdbcType=DECIMAL},
+            </if>
+            <if test="rejoin_time != null" >
+                #{rejoin_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="audit_pass_time != null" >
+                #{audit_pass_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="audit_reject_time != null" >
+                #{audit_reject_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="patcher_pass_time != null" >
+                #{patcher_pass_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="patcher_reject_time != null" >
+                #{patcher_reject_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="patcher_car_time != null" >
+                #{patcher_car_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="cancel_time != null" >
+                #{cancel_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="free_type != null" >
+                #{free_type,jdbcType=INTEGER},
+            </if>
+            <if test="printType != null" >
+                #{printType,jdbcType=INTEGER},
+            </if>
+            <if test="trip_type != null" >
+                #{trip_type,jdbcType=INTEGER},
+            </if>
+            <if test="old_apply_id != null" >
+                #{old_apply_id,jdbcType=INTEGER},
+            </if>
+            <if test="city_code != null" >
+                #{city_code,jdbcType=VARCHAR},
+            </if>
+            <if test="trip_content != null" >
+                #{trip_content,jdbcType=VARCHAR},
+            </if>
+            <if test="syna_time != null" >
+                #{syna_time,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insertMonCarBalanceInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarBalanceInfo">
+        insert into mon_car_balance_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="daka_id != null" >
+                daka_id,
+            </if>
+            <if test="balance_state != null" >
+                balance_state,
+            </if>
+            <if test="balance_payment != null" >
+                balance_payment,
+            </if>
+            <if test="balance_billing_state != null" >
+                balance_billing_state,
+            </if>
+            <if test="balance_time != null" >
+                balance_time,
+            </if>
+            <if test="city_code != null" >
+                city_code,
+            </if>
+            <if test="old_id != null" >
+                old_id,
+            </if>
+            <if test="syna_time != null" >
+                syna_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="daka_id != null" >
+                #{daka_id,jdbcType=INTEGER},
+            </if>
+            <if test="balance_state != null" >
+                #{balance_state,jdbcType=INTEGER},
+            </if>
+            <if test="balance_payment != null" >
+                #{balance_payment,jdbcType=DECIMAL},
+            </if>
+            <if test="balance_billing_state != null" >
+                #{balance_billing_state,jdbcType=INTEGER},
+            </if>
+            <if test="balance_time != null" >
+                #{balance_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="city_code != null" >
+                #{city_code,jdbcType=VARCHAR},
+            </if>
+            <if test="old_id != null" >
+                #{old_id,jdbcType=BIGINT},
+            </if>
+            <if test="syna_time != null" >
+                #{syna_time,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insertMonCarDakaInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarDakaInfo">
+        insert into mon_car_daka_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="driver_id != null" >
+                driver_id,
+            </if>
+            <if test="user_id != null" >
+                user_id,
+            </if>
+            <if test="driver_money != null" >
+                driver_money,
+            </if>
+            <if test="user_money != null" >
+                user_money,
+            </if>
+            <if test="dpet_id != null" >
+                dpet_id,
+            </if>
+            <if test="car_id != null" >
+                car_id,
+            </if>
+            <if test="daka_id != null" >
+                daka_id,
+            </if>
+            <if test="shoufei_time != null" >
+                shoufei_time,
+            </if>
+            <if test="shoufei_time_ != null" >
+                shoufei_time_,
+            </if>
+            <if test="danjia_id != null" >
+                danjia_id,
+            </if>
+            <if test="licheng != null" >
+                licheng,
+            </if>
+            <if test="weizhang != null" >
+                weizhang,
+            </if>
+            <if test="is_flag != null" >
+                is_flag,
+            </if>
+            <if test="remark != null" >
+                remark,
+            </if>
+            <if test="car_address_daka != null" >
+                car_address_daka,
+            </if>
+            <if test="car_destination_daka != null" >
+                car_destination_daka,
+            </if>
+            <if test="car_youhao != null" >
+                car_youhao,
+            </if>
+            <if test="yong_che_ren != null" >
+                yong_che_ren,
+            </if>
+            <if test="fy_apply_id != null" >
+                fy_apply_id,
+            </if>
+            <if test="feiyong != null" >
+                feiyong,
+            </if>
+            <if test="xiaoshi != null" >
+                xiaoshi,
+            </if>
+            <if test="jichu != null" >
+                jichu,
+            </if>
+            <if test="fujia != null" >
+                fujia,
+            </if>
+            <if test="xingshi_km != null" >
+                xingshi_km,
+            </if>
+            <if test="feiyong_zhiyi != null" >
+                feiyong_zhiyi,
+            </if>
+            <if test="yong_che_times != null" >
+                yong_che_times,
+            </if>
+            <if test="city_code != null" >
+                city_code,
+            </if>
+            <if test="old_id != null" >
+                old_id,
+            </if>
+            <if test="syna_time != null" >
+                syna_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="driver_id != null" >
+                #{driver_id,jdbcType=INTEGER},
+            </if>
+            <if test="user_id != null" >
+                #{user_id,jdbcType=INTEGER},
+            </if>
+            <if test="driver_money != null" >
+                #{driver_money,jdbcType=DOUBLE},
+            </if>
+            <if test="user_money != null" >
+                #{user_money,jdbcType=DOUBLE},
+            </if>
+            <if test="dpet_id != null" >
+                #{dpet_id,jdbcType=INTEGER},
+            </if>
+            <if test="car_id != null" >
+                #{car_id,jdbcType=INTEGER},
+            </if>
+            <if test="daka_id != null" >
+                #{daka_id,jdbcType=INTEGER},
+            </if>
+            <if test="shoufei_time != null" >
+                #{shoufei_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="shoufei_time_ != null" >
+                #{shoufei_time_,jdbcType=TIMESTAMP},
+            </if>
+            <if test="danjia_id != null" >
+                #{danjia_id,jdbcType=DOUBLE},
+            </if>
+            <if test="licheng != null" >
+                #{licheng,jdbcType=DOUBLE},
+            </if>
+            <if test="weizhang != null" >
+                #{weizhang,jdbcType=VARCHAR},
+            </if>
+            <if test="is_flag != null" >
+                #{is_flag,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null" >
+                #{remark,jdbcType=CHAR},
+            </if>
+            <if test="car_address_daka != null" >
+                #{car_address_daka,jdbcType=CHAR},
+            </if>
+            <if test="car_destination_daka != null" >
+                #{car_destination_daka,jdbcType=CHAR},
+            </if>
+            <if test="car_youhao != null" >
+                #{car_youhao,jdbcType=DOUBLE},
+            </if>
+            <if test="yong_che_ren != null" >
+                #{yong_che_ren,jdbcType=CHAR},
+            </if>
+            <if test="fy_apply_id != null" >
+                #{fy_apply_id,jdbcType=INTEGER},
+            </if>
+            <if test="feiyong != null" >
+                #{feiyong,jdbcType=DOUBLE},
+            </if>
+            <if test="xiaoshi != null" >
+                #{xiaoshi,jdbcType=DOUBLE},
+            </if>
+            <if test="jichu != null" >
+                #{jichu,jdbcType=DOUBLE},
+            </if>
+            <if test="fujia != null" >
+                #{fujia,jdbcType=DOUBLE},
+            </if>
+            <if test="xingshi_km != null" >
+                #{xingshi_km,jdbcType=DOUBLE},
+            </if>
+            <if test="feiyong_zhiyi != null" >
+                #{feiyong_zhiyi,jdbcType=CHAR},
+            </if>
+            <if test="yong_che_times != null" >
+                #{yong_che_times,jdbcType=CHAR},
+            </if>
+            <if test="city_code != null" >
+                #{city_code,jdbcType=VARCHAR},
+            </if>
+            <if test="old_id != null" >
+                #{old_id,jdbcType=BIGINT},
+            </if>
+            <if test="syna_time != null" >
+                #{syna_time,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insertMonCarInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarInfo">
+        insert into mon_car_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="car_num != null" >
+                car_num,
+            </if>
+            <if test="car_number != null" >
+                car_number,
+            </if>
+            <if test="car_type != null" >
+                car_type,
+            </if>
+            <if test="car_model != null" >
+                car_model,
+            </if>
+            <if test="car_state != null" >
+                car_state,
+            </if>
+            <if test="department_id != null" >
+                department_id,
+            </if>
+            <if test="car_manufacturers != null" >
+                car_manufacturers,
+            </if>
+            <if test="car_milage != null" >
+                car_milage,
+            </if>
+            <if test="car_icon != null" >
+                car_icon,
+            </if>
+            <if test="car_tree_icon != null" >
+                car_tree_icon,
+            </if>
+            <if test="car_color != null" >
+                car_color,
+            </if>
+            <if test="car_capacity != null" >
+                car_capacity,
+            </if>
+            <if test="past_time != null" >
+                past_time,
+            </if>
+            <if test="add_time != null" >
+                add_time,
+            </if>
+            <if test="car_price != null" >
+                car_price,
+            </if>
+            <if test="license_plate_color != null" >
+                license_plate_color,
+            </if>
+            <if test="car_login != null" >
+                car_login,
+            </if>
+            <if test="img_name != null" >
+                img_name,
+            </if>
+            <if test="img_save_name != null" >
+                img_save_name,
+            </if>
+            <if test="is_flag != null" >
+                is_flag,
+            </if>
+            <if test="car_remark != null" >
+                car_remark,
+            </if>
+            <if test="car_employState != null" >
+                car_employState,
+            </if>
+            <if test="car_seating != null" >
+                car_seating,
+            </if>
+            <if test="car_xsz != null" >
+                car_xsz,
+            </if>
+            <if test="car_money != null" >
+                car_money,
+            </if>
+            <if test="car_vin != null" >
+                car_vin,
+            </if>
+            <if test="car_pl != null" >
+                car_pl,
+            </if>
+            <if test="car_zg != null" >
+                car_zg,
+            </if>
+            <if test="car_zb != null" >
+                car_zb,
+            </if>
+            <if test="car_ts != null" >
+                car_ts,
+            </if>
+            <if test="car_chegai != null" >
+                car_chegai,
+            </if>
+            <if test="car_speed != null" >
+                car_speed,
+            </if>
+            <if test="car_guige_xinghao != null" >
+                car_guige_xinghao,
+            </if>
+            <if test="car_xingzhi != null" >
+                car_xingzhi,
+            </if>
+            <if test="car_zichankahao != null" >
+                car_zichankahao,
+            </if>
+            <if test="car_youliao_type != null" >
+                car_youliao_type,
+            </if>
+            <if test="car_cj_number != null" >
+                car_cj_number,
+            </if>
+            <if test="car_fdj_number != null" >
+                car_fdj_number,
+            </if>
+            <if test="car_baoyangT != null" >
+                car_baoyangT,
+            </if>
+            <if test="chedui != null" >
+                chedui,
+            </if>
+            <if test="serial_number != null" >
+                serial_number,
+            </if>
+            <if test="drive_mode != null" >
+                drive_mode,
+            </if>
+            <if test="car_license_time != null" >
+                car_license_time,
+            </if>
+            <if test="power != null" >
+                power,
+            </if>
+            <if test="oil_consumption != null" >
+                oil_consumption,
+            </if>
+            <if test="car_register_number != null" >
+                car_register_number,
+            </if>
+            <if test="car_register_time != null" >
+                car_register_time,
+            </if>
+            <if test="car_fdj_model != null" >
+                car_fdj_model,
+            </if>
+            <if test="additional_tax_number != null" >
+                additional_tax_number,
+            </if>
+            <if test="scrap_time != null" >
+                scrap_time,
+            </if>
+            <if test="safety_km != null" >
+                safety_km,
+            </if>
+            <if test="source_country != null" >
+                source_country,
+            </if>
+            <if test="fuel_type != null" >
+                fuel_type,
+            </if>
+            <if test="swerve_type != null" >
+                swerve_type,
+            </if>
+            <if test="tyre_num != null" >
+                tyre_num,
+            </if>
+            <if test="tyre_distance != null" >
+                tyre_distance,
+            </if>
+            <if test="tyre_standard != null" >
+                tyre_standard,
+            </if>
+            <if test="axle_num != null" >
+                axle_num,
+            </if>
+            <if test="axle_distance != null" >
+                axle_distance,
+            </if>
+            <if test="out_size != null" >
+                out_size,
+            </if>
+            <if test="total_quality != null" >
+                total_quality,
+            </if>
+            <if test="get_type != null" >
+                get_type,
+            </if>
+            <if test="leave_factory_time != null" >
+                leave_factory_time,
+            </if>
+            <if test="certificate_time != null" >
+                certificate_time,
+            </if>
+            <if test="yearinspect_time != null" >
+                yearinspect_time,
+            </if>
+            <if test="car_img_name != null" >
+                car_img_name,
+            </if>
+            <if test="car_img_path != null" >
+                car_img_path,
+            </if>
+            <if test="borrow_dept != null" >
+                borrow_dept,
+            </if>
+            <if test="skill_state != null" >
+                skill_state,
+            </if>
+            <if test="wifi_num != null" >
+                wifi_num,
+            </if>
+            <if test="syna_flag != null" >
+                syna_flag,
+            </if>
+            <if test="city_code != null" >
+                city_code,
+            </if>
+            <if test="old_id != null" >
+                old_id,
+            </if>
+            <if test="syna_time != null" >
+                syna_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="car_num != null" >
+                #{car_num,jdbcType=VARCHAR},
+            </if>
+            <if test="car_number != null" >
+                #{car_number,jdbcType=INTEGER},
+            </if>
+            <if test="car_type != null" >
+                #{car_type,jdbcType=INTEGER},
+            </if>
+            <if test="car_model != null" >
+                #{car_model,jdbcType=INTEGER},
+            </if>
+            <if test="car_state != null" >
+                #{car_state,jdbcType=INTEGER},
+            </if>
+            <if test="department_id != null" >
+                #{department_id,jdbcType=INTEGER},
+            </if>
+            <if test="car_manufacturers != null" >
+                #{car_manufacturers,jdbcType=VARCHAR},
+            </if>
+            <if test="car_milage != null" >
+                #{car_milage,jdbcType=DOUBLE},
+            </if>
+            <if test="car_icon != null" >
+                #{car_icon,jdbcType=VARCHAR},
+            </if>
+            <if test="car_tree_icon != null" >
+                #{car_tree_icon,jdbcType=VARCHAR},
+            </if>
+            <if test="car_color != null" >
+                #{car_color,jdbcType=INTEGER},
+            </if>
+            <if test="car_capacity != null" >
+                #{car_capacity,jdbcType=DOUBLE},
+            </if>
+            <if test="past_time != null" >
+                #{past_time,jdbcType=INTEGER},
+            </if>
+            <if test="add_time != null" >
+                #{add_time,jdbcType=VARCHAR},
+            </if>
+            <if test="car_price != null" >
+                #{car_price,jdbcType=DOUBLE},
+            </if>
+            <if test="license_plate_color != null" >
+                #{license_plate_color,jdbcType=VARCHAR},
+            </if>
+            <if test="car_login != null" >
+                #{car_login,jdbcType=INTEGER},
+            </if>
+            <if test="img_name != null" >
+                #{img_name,jdbcType=VARCHAR},
+            </if>
+            <if test="img_save_name != null" >
+                #{img_save_name,jdbcType=VARCHAR},
+            </if>
+            <if test="is_flag != null" >
+                #{is_flag,jdbcType=INTEGER},
+            </if>
+            <if test="car_remark != null" >
+                #{car_remark,jdbcType=VARCHAR},
+            </if>
+            <if test="car_employState != null" >
+                #{car_employState,jdbcType=INTEGER},
+            </if>
+            <if test="car_seating != null" >
+                #{car_seating,jdbcType=INTEGER},
+            </if>
+            <if test="car_xsz != null" >
+                #{car_xsz,jdbcType=VARCHAR},
+            </if>
+            <if test="car_money != null" >
+                #{car_money,jdbcType=DOUBLE},
+            </if>
+            <if test="car_vin != null" >
+                #{car_vin,jdbcType=INTEGER},
+            </if>
+            <if test="car_pl != null" >
+                #{car_pl,jdbcType=CHAR},
+            </if>
+            <if test="car_zg != null" >
+                #{car_zg,jdbcType=INTEGER},
+            </if>
+            <if test="car_zb != null" >
+                #{car_zb,jdbcType=INTEGER},
+            </if>
+            <if test="car_ts != null" >
+                #{car_ts,jdbcType=INTEGER},
+            </if>
+            <if test="car_chegai != null" >
+                #{car_chegai,jdbcType=INTEGER},
+            </if>
+            <if test="car_speed != null" >
+                #{car_speed,jdbcType=DOUBLE},
+            </if>
+            <if test="car_guige_xinghao != null" >
+                #{car_guige_xinghao,jdbcType=VARCHAR},
+            </if>
+            <if test="car_xingzhi != null" >
+                #{car_xingzhi,jdbcType=INTEGER},
+            </if>
+            <if test="car_zichankahao != null" >
+                #{car_zichankahao,jdbcType=VARCHAR},
+            </if>
+            <if test="car_youliao_type != null" >
+                #{car_youliao_type,jdbcType=INTEGER},
+            </if>
+            <if test="car_cj_number != null" >
+                #{car_cj_number,jdbcType=VARCHAR},
+            </if>
+            <if test="car_fdj_number != null" >
+                #{car_fdj_number,jdbcType=VARCHAR},
+            </if>
+            <if test="car_baoyangT != null" >
+                #{car_baoyangT,jdbcType=INTEGER},
+            </if>
+            <if test="chedui != null" >
+                #{chedui,jdbcType=VARCHAR},
+            </if>
+            <if test="serial_number != null" >
+                #{serial_number,jdbcType=VARCHAR},
+            </if>
+            <if test="drive_mode != null" >
+                #{drive_mode,jdbcType=VARCHAR},
+            </if>
+            <if test="car_license_time != null" >
+                #{car_license_time,jdbcType=DATE},
+            </if>
+            <if test="power != null" >
+                #{power,jdbcType=VARCHAR},
+            </if>
+            <if test="oil_consumption != null" >
+                #{oil_consumption,jdbcType=VARCHAR},
+            </if>
+            <if test="car_register_number != null" >
+                #{car_register_number,jdbcType=VARCHAR},
+            </if>
+            <if test="car_register_time != null" >
+                #{car_register_time,jdbcType=DATE},
+            </if>
+            <if test="car_fdj_model != null" >
+                #{car_fdj_model,jdbcType=VARCHAR},
+            </if>
+            <if test="additional_tax_number != null" >
+                #{additional_tax_number,jdbcType=VARCHAR},
+            </if>
+            <if test="scrap_time != null" >
+                #{scrap_time,jdbcType=DATE},
+            </if>
+            <if test="safety_km != null" >
+                #{safety_km,jdbcType=VARCHAR},
+            </if>
+            <if test="source_country != null" >
+                #{source_country,jdbcType=VARCHAR},
+            </if>
+            <if test="fuel_type != null" >
+                #{fuel_type,jdbcType=VARCHAR},
+            </if>
+            <if test="swerve_type != null" >
+                #{swerve_type,jdbcType=VARCHAR},
+            </if>
+            <if test="tyre_num != null" >
+                #{tyre_num,jdbcType=INTEGER},
+            </if>
+            <if test="tyre_distance != null" >
+                #{tyre_distance,jdbcType=VARCHAR},
+            </if>
+            <if test="tyre_standard != null" >
+                #{tyre_standard,jdbcType=VARCHAR},
+            </if>
+            <if test="axle_num != null" >
+                #{axle_num,jdbcType=INTEGER},
+            </if>
+            <if test="axle_distance != null" >
+                #{axle_distance,jdbcType=VARCHAR},
+            </if>
+            <if test="out_size != null" >
+                #{out_size,jdbcType=VARCHAR},
+            </if>
+            <if test="total_quality != null" >
+                #{total_quality,jdbcType=VARCHAR},
+            </if>
+            <if test="get_type != null" >
+                #{get_type,jdbcType=VARCHAR},
+            </if>
+            <if test="leave_factory_time != null" >
+                #{leave_factory_time,jdbcType=DATE},
+            </if>
+            <if test="certificate_time != null" >
+                #{certificate_time,jdbcType=DATE},
+            </if>
+            <if test="yearinspect_time != null" >
+                #{yearinspect_time,jdbcType=DATE},
+            </if>
+            <if test="car_img_name != null" >
+                #{car_img_name,jdbcType=VARCHAR},
+            </if>
+            <if test="car_img_path != null" >
+                #{car_img_path,jdbcType=VARCHAR},
+            </if>
+            <if test="borrow_dept != null" >
+                #{borrow_dept,jdbcType=VARCHAR},
+            </if>
+            <if test="skill_state != null" >
+                #{skill_state,jdbcType=INTEGER},
+            </if>
+            <if test="wifi_num != null" >
+                #{wifi_num,jdbcType=VARCHAR},
+            </if>
+            <if test="syna_flag != null" >
+                #{syna_flag,jdbcType=CHAR},
+            </if>
+            <if test="city_code != null" >
+                #{city_code,jdbcType=VARCHAR},
+            </if>
+            <if test="old_id != null" >
+                #{old_id,jdbcType=BIGINT},
+            </if>
+            <if test="syna_time != null" >
+                #{syna_time,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insertMonCarTypeInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarTypeInfo">
+        insert into mon_car_type_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="car_type_name != null" >
+                car_type_name,
+            </if>
+            <if test="seatNum != null" >
+                seatNum,
+            </if>
+            <if test="picture_name != null" >
+                picture_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="car_type_name != null" >
+                #{car_type_name,jdbcType=VARCHAR},
+            </if>
+            <if test="seatNum != null" >
+                #{seatNum,jdbcType=INTEGER},
+            </if>
+            <if test="picture_name != null" >
+                #{picture_name,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insertMonUserInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonUserInfo">
+        insert into mon_user_info
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="user_name != null" >
+                user_name,
+            </if>
+            <if test="user_past_time != null" >
+                user_past_time,
+            </if>
+            <if test="user_pwd != null" >
+                user_pwd,
+            </if>
+            <if test="user_type != null" >
+                user_type,
+            </if>
+            <if test="user_state != null" >
+                user_state,
+            </if>
+            <if test="user_dept_id != null" >
+                user_dept_id,
+            </if>
+            <if test="user_phone_login != null" >
+                user_phone_login,
+            </if>
+            <if test="role_id != null" >
+                role_id,
+            </if>
+            <if test="user_remark != null" >
+                user_remark,
+            </if>
+            <if test="user_sex != null" >
+                user_sex,
+            </if>
+            <if test="user_phone != null" >
+                user_phone,
+            </if>
+            <if test="user_address != null" >
+                user_address,
+            </if>
+            <if test="user_num != null" >
+                user_num,
+            </if>
+            <if test="is_type != null" >
+                is_type,
+            </if>
+            <if test="user_img_name != null" >
+                user_img_name,
+            </if>
+            <if test="user_img_path != null" >
+                user_img_path,
+            </if>
+            <if test="is_flag != null" >
+                is_flag,
+            </if>
+            <if test="user_car_cj != null" >
+                user_car_cj,
+            </if>
+            <if test="driverType != null" >
+                driverType,
+            </if>
+            <if test="user_alertyear != null" >
+                user_alertyear,
+            </if>
+            <if test="user_is_cg != null" >
+                user_is_cg,
+            </if>
+            <if test="driver_img_name != null" >
+                driver_img_name,
+            </if>
+            <if test="driver_ddimg_name != null" >
+                driver_ddimg_name,
+            </if>
+            <if test="driver_phone_duanhao != null" >
+                driver_phone_duanhao,
+            </if>
+            <if test="driver_jiashizheng_date != null" >
+                driver_jiashizheng_date,
+            </if>
+            <if test="driver_zhunjia != null" >
+                driver_zhunjia,
+            </if>
+            <if test="driver_num_time != null" >
+                driver_num_time,
+            </if>
+            <if test="driver_time_num != null" >
+                driver_time_num,
+            </if>
+            <if test="vacate_id != null" >
+                vacate_id,
+            </if>
+            <if test="vacate_num != null" >
+                vacate_num,
+            </if>
+            <if test="drivercard_jieshu_time != null" >
+                drivercard_jieshu_time,
+            </if>
+            <if test="driver_niansheng != null" >
+                driver_niansheng,
+            </if>
+            <if test="driver_age != null" >
+                driver_age,
+            </if>
+            <if test="driver_zjcx != null" >
+                driver_zjcx,
+            </if>
+            <if test="driver_number != null" >
+                driver_number,
+            </if>
+            <if test="driver_check_time != null" >
+                driver_check_time,
+            </if>
+            <if test="driverFp != null" >
+                driverFp,
+            </if>
+            <if test="driver_type != null" >
+                driver_type,
+            </if>
+            <if test="bianzhi != null" >
+                bianzhi,
+            </if>
+            <if test="chedui != null" >
+                chedui,
+            </if>
+            <if test="uname != null" >
+                uname,
+            </if>
+            <if test="sso_user_id != null" >
+                sso_user_id,
+            </if>
+            <if test="sf_no != null" >
+                sf_no,
+            </if>
+            <if test="csny_time != null" >
+                csny_time,
+            </if>
+            <if test="mz != null" >
+                mz,
+            </if>
+            <if test="jg != null" >
+                jg,
+            </if>
+            <if test="zzmm != null" >
+                zzmm,
+            </if>
+            <if test="rdsj != null" >
+                rdsj,
+            </if>
+            <if test="hyzk != null" >
+                hyzk,
+            </if>
+            <if test="cjgzsj != null" >
+                cjgzsj,
+            </if>
+            <if test="jbdwsj != null" >
+                jbdwsj,
+            </if>
+            <if test="xqrzw != null" >
+                xqrzw,
+            </if>
+            <if test="xl_q != null" >
+                xl_q,
+            </if>
+            <if test="xw_q != null" >
+                xw_q,
+            </if>
+            <if test="yx_zy_q != null" >
+                yx_zy_q,
+            </if>
+            <if test="xl_z != null" >
+                xl_z,
+            </if>
+            <if test="xw_z != null" >
+                xw_z,
+            </if>
+            <if test="yx_zy_z != null" >
+                yx_zy_z,
+            </if>
+            <if test="bz_sf != null" >
+                bz_sf,
+            </if>
+            <if test="dj_zw != null" >
+                dj_zw,
+            </if>
+            <if test="fjszd != null" >
+                fjszd,
+            </if>
+            <if test="tbrq != null" >
+                tbrq,
+            </if>
+            <if test="ujstsettings != null" >
+                ujstsettings,
+            </if>
+            <if test="syna_flag != null" >
+                syna_flag,
+            </if>
+            <if test="city_code != null" >
+                city_code,
+            </if>
+            <if test="old_id != null" >
+                old_id,
+            </if>
+            <if test="syna_time != null" >
+                syna_time,
+            </if>
+            <if test="zygzjl != null" >
+                zygzjl,
+            </if>
+            <if test="jtzycy != null" >
+                jtzycy,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="user_name != null" >
+                #{user_name,jdbcType=VARCHAR},
+            </if>
+            <if test="user_past_time != null" >
+                #{user_past_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="user_pwd != null" >
+                #{user_pwd,jdbcType=VARCHAR},
+            </if>
+            <if test="user_type != null" >
+                #{user_type,jdbcType=INTEGER},
+            </if>
+            <if test="user_state != null" >
+                #{user_state,jdbcType=INTEGER},
+            </if>
+            <if test="user_dept_id != null" >
+                #{user_dept_id,jdbcType=INTEGER},
+            </if>
+            <if test="user_phone_login != null" >
+                #{user_phone_login,jdbcType=INTEGER},
+            </if>
+            <if test="role_id != null" >
+                #{role_id,jdbcType=INTEGER},
+            </if>
+            <if test="user_remark != null" >
+                #{user_remark,jdbcType=VARCHAR},
+            </if>
+            <if test="user_sex != null" >
+                #{user_sex,jdbcType=INTEGER},
+            </if>
+            <if test="user_phone != null" >
+                #{user_phone,jdbcType=VARCHAR},
+            </if>
+            <if test="user_address != null" >
+                #{user_address,jdbcType=VARCHAR},
+            </if>
+            <if test="user_num != null" >
+                #{user_num,jdbcType=VARCHAR},
+            </if>
+            <if test="is_type != null" >
+                #{is_type,jdbcType=INTEGER},
+            </if>
+            <if test="user_img_name != null" >
+                #{user_img_name,jdbcType=VARCHAR},
+            </if>
+            <if test="user_img_path != null" >
+                #{user_img_path,jdbcType=VARCHAR},
+            </if>
+            <if test="is_flag != null" >
+                #{is_flag,jdbcType=INTEGER},
+            </if>
+            <if test="user_car_cj != null" >
+                #{user_car_cj,jdbcType=VARCHAR},
+            </if>
+            <if test="driverType != null" >
+                #{driverType,jdbcType=INTEGER},
+            </if>
+            <if test="user_alertyear != null" >
+                #{user_alertyear,jdbcType=VARCHAR},
+            </if>
+            <if test="user_is_cg != null" >
+                #{user_is_cg,jdbcType=INTEGER},
+            </if>
+            <if test="driver_img_name != null" >
+                #{driver_img_name,jdbcType=VARCHAR},
+            </if>
+            <if test="driver_ddimg_name != null" >
+                #{driver_ddimg_name,jdbcType=VARCHAR},
+            </if>
+            <if test="driver_phone_duanhao != null" >
+                #{driver_phone_duanhao,jdbcType=VARCHAR},
+            </if>
+            <if test="driver_jiashizheng_date != null" >
+                #{driver_jiashizheng_date,jdbcType=TIMESTAMP},
+            </if>
+            <if test="driver_zhunjia != null" >
+                #{driver_zhunjia,jdbcType=INTEGER},
+            </if>
+            <if test="driver_num_time != null" >
+                #{driver_num_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="driver_time_num != null" >
+                #{driver_time_num,jdbcType=INTEGER},
+            </if>
+            <if test="vacate_id != null" >
+                #{vacate_id,jdbcType=INTEGER},
+            </if>
+            <if test="vacate_num != null" >
+                #{vacate_num,jdbcType=INTEGER},
+            </if>
+            <if test="drivercard_jieshu_time != null" >
+                #{drivercard_jieshu_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="driver_niansheng != null" >
+                #{driver_niansheng,jdbcType=INTEGER},
+            </if>
+            <if test="driver_age != null" >
+                #{driver_age,jdbcType=INTEGER},
+            </if>
+            <if test="driver_zjcx != null" >
+                #{driver_zjcx,jdbcType=VARCHAR},
+            </if>
+            <if test="driver_number != null" >
+                #{driver_number,jdbcType=VARCHAR},
+            </if>
+            <if test="driver_check_time != null" >
+                #{driver_check_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="driverFp != null" >
+                #{driverFp,jdbcType=INTEGER},
+            </if>
+            <if test="driver_type != null" >
+                #{driver_type,jdbcType=INTEGER},
+            </if>
+            <if test="bianzhi != null" >
+                #{bianzhi,jdbcType=VARCHAR},
+            </if>
+            <if test="chedui != null" >
+                #{chedui,jdbcType=VARCHAR},
+            </if>
+            <if test="uname != null" >
+                #{uname,jdbcType=VARCHAR},
+            </if>
+            <if test="sso_user_id != null" >
+                #{sso_user_id,jdbcType=VARCHAR},
+            </if>
+            <if test="sf_no != null" >
+                #{sf_no,jdbcType=VARCHAR},
+            </if>
+            <if test="csny_time != null" >
+                #{csny_time,jdbcType=DATE},
+            </if>
+            <if test="mz != null" >
+                #{mz,jdbcType=VARCHAR},
+            </if>
+            <if test="jg != null" >
+                #{jg,jdbcType=VARCHAR},
+            </if>
+            <if test="zzmm != null" >
+                #{zzmm,jdbcType=VARCHAR},
+            </if>
+            <if test="rdsj != null" >
+                #{rdsj,jdbcType=DATE},
+            </if>
+            <if test="hyzk != null" >
+                #{hyzk,jdbcType=VARCHAR},
+            </if>
+            <if test="cjgzsj != null" >
+                #{cjgzsj,jdbcType=DATE},
+            </if>
+            <if test="jbdwsj != null" >
+                #{jbdwsj,jdbcType=DATE},
+            </if>
+            <if test="xqrzw != null" >
+                #{xqrzw,jdbcType=VARCHAR},
+            </if>
+            <if test="xl_q != null" >
+                #{xl_q,jdbcType=VARCHAR},
+            </if>
+            <if test="xw_q != null" >
+                #{xw_q,jdbcType=VARCHAR},
+            </if>
+            <if test="yx_zy_q != null" >
+                #{yx_zy_q,jdbcType=VARCHAR},
+            </if>
+            <if test="xl_z != null" >
+                #{xl_z,jdbcType=VARCHAR},
+            </if>
+            <if test="xw_z != null" >
+                #{xw_z,jdbcType=VARCHAR},
+            </if>
+            <if test="yx_zy_z != null" >
+                #{yx_zy_z,jdbcType=VARCHAR},
+            </if>
+            <if test="bz_sf != null" >
+                #{bz_sf,jdbcType=VARCHAR},
+            </if>
+            <if test="dj_zw != null" >
+                #{dj_zw,jdbcType=VARCHAR},
+            </if>
+            <if test="fjszd != null" >
+                #{fjszd,jdbcType=VARCHAR},
+            </if>
+            <if test="tbrq != null" >
+                #{tbrq,jdbcType=DATE},
+            </if>
+            <if test="ujstsettings != null" >
+                #{ujstsettings,jdbcType=VARCHAR},
+            </if>
+            <if test="syna_flag != null" >
+                #{syna_flag,jdbcType=CHAR},
+            </if>
+            <if test="city_code != null" >
+                #{city_code,jdbcType=VARCHAR},
+            </if>
+            <if test="old_id != null" >
+                #{old_id,jdbcType=BIGINT},
+            </if>
+            <if test="syna_time != null" >
+                #{syna_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="zygzjl != null" >
+                #{zygzjl,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="jtzycy != null" >
+                #{jtzycy,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+
+    <insert id="insertMonDepartmentInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonDepartmentInfo">
+        insert into mon_department_info
+
+        -<trim suffix=")" prefix="(" suffixOverrides=",">
+
+        <if test="id != null">id, </if>
+
+        <if test="dept_name != null">dept_name, </if>
+
+        <if test="dept_type != null">dept_type, </if>
+
+        <if test="dept_super_id != null">dept_super_id, </if>
+
+        <if test="dept_desc != null">dept_desc, </if>
+
+        <if test="dept_lat != null">dept_lat, </if>
+
+        <if test="dept_lon != null">dept_lon, </if>
+
+        <if test="dept_adress != null">dept_adress, </if>
+
+        <if test="is_flag != null">is_flag, </if>
+
+        <if test="dapt_remark != null">dapt_remark, </if>
+
+        <if test="gs_id != null">gs_id, </if>
+
+        <if test="pt_id != null">pt_id, </if>
+
+        <if test="fw_type != null">fw_type, </if>
+
+        <if test="dept_super_ids != null">dept_super_ids, </if>
+
+        <if test="name != null">name, </if>
+
+        <if test="color != null">color, </if>
+
+        <if test="qy_id != null">qy_id, </if>
+
+        <if test="orgcoding != null">orgcoding, </if>
+
+        <if test="orgallname != null">orgallname, </if>
+
+        <if test="dept_flag != null">dept_flag, </if>
+
+        <if test="dept_number != null">dept_number, </if>
+
+        <if test="syna_time != null">syna_time, </if>
+
+        <if test="syna_flag != null">syna_flag, </if>
+
+        <if test="geo != null">geo, </if>
+
+    </trim>
+
+
+        -<trim suffix=")" prefix="values (" suffixOverrides=",">
+
+        <if test="id != null">#{id,jdbcType=INTEGER}, </if>
+
+        <if test="dept_name != null">#{dept_name,jdbcType=VARCHAR}, </if>
+
+        <if test="dept_type != null">#{dept_type,jdbcType=INTEGER}, </if>
+
+        <if test="dept_super_id != null">#{dept_super_id,jdbcType=INTEGER}, </if>
+
+        <if test="dept_desc != null">#{dept_desc,jdbcType=VARCHAR}, </if>
+
+        <if test="dept_lat != null">#{dept_lat,jdbcType=VARCHAR}, </if>
+
+        <if test="dept_lon != null">#{dept_lon,jdbcType=VARCHAR}, </if>
+
+        <if test="dept_adress != null">#{dept_adress,jdbcType=VARCHAR}, </if>
+
+        <if test="is_flag != null">#{is_flag,jdbcType=INTEGER}, </if>
+
+        <if test="dapt_remark != null">#{dapt_remark,jdbcType=VARCHAR}, </if>
+
+        <if test="gs_id != null">#{gs_id,jdbcType=INTEGER}, </if>
+
+        <if test="pt_id != null">#{pt_id,jdbcType=INTEGER}, </if>
+
+        <if test="fw_type != null">#{fw_type,jdbcType=INTEGER}, </if>
+
+        <if test="dept_super_ids != null">#{dept_super_ids,jdbcType=VARCHAR}, </if>
+
+        <if test="name != null">#{name,jdbcType=VARCHAR}, </if>
+
+        <if test="color != null">#{color,jdbcType=VARCHAR}, </if>
+
+        <if test="qy_id != null">#{qy_id,jdbcType=INTEGER}, </if>
+
+        <if test="orgcoding != null">#{orgcoding,jdbcType=VARCHAR}, </if>
+
+        <if test="orgallname != null">#{orgallname,jdbcType=VARCHAR}, </if>
+
+        <if test="dept_flag != null">#{dept_flag,jdbcType=INTEGER}, </if>
+
+        <if test="dept_number != null">#{dept_number,jdbcType=VARCHAR}, </if>
+
+        <if test="syna_time != null">#{syna_time,jdbcType=TIMESTAMP}, </if>
+
+        <if test="syna_flag != null">#{syna_flag,jdbcType=CHAR}, </if>
+
+        <if test="geo != null">#{geo,jdbcType=LONGVARCHAR}, </if>
+
+    </trim>
+    </insert>
+
+
+
+
+
+
+
+
+
+    <delete id="deleteMonCarApplyInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarApplyInfo">
+      delete
+      from mon_car_apply_info
+      where id = #{id}
+    </delete>
+
+    <delete id="deleteMonCarBalanceInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarBalanceInfo">
+      delete
+      from mon_car_balance_info
+      where id = #{id}
+    </delete>
+
+    <delete id="deleteMonCarDakaInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarDakaInfo">
+      delete
+      from mon_car_daka_info
+      where id = #{id}
+    </delete>
+
+    <delete id="deleteMonCarInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarInfo">
+      delete
+      from mon_car_info
+      where id = #{id}
+    </delete>
+
+    <delete id="deleteMonCarTypeInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarTypeInfo">
+      delete
+      from mon_car_type_info
+      where id = #{id}
+    </delete>
+
+    <delete id="deleteMonUserInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonUserInfo">
+      delete
+      from mon_user_info
+      where id = #{id}
+    </delete>
+
+
+    <delete id="deleteMonDepartmentInfoByID" parameterType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonDepartmentInfo">
+        delete
+        from mon_department_info
+        where id = #{id}
+    </delete>
+
+</mapper>

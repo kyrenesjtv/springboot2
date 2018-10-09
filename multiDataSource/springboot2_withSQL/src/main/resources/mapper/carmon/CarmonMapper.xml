@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.kyrenesjtv.springboot2.springboot2_withsql.DAO.carmon.CarmonDAO">
+
+
+
+    <select id="queryMonCarApplyInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarApplyInfo" parameterType="java.lang.Integer">
+        select  id, apply_name_id, apply_car_id, apply_driver_id, apply_name_phone, apply_man_num,
+    apply_time, apply_type, apply_state, apply_flow_state, apply_dept_id, apply_user_id,
+    apply_use_range, apply_use_address, apply_destination, apply_use_phone, apply_use_time,
+    apply_back_time, apply_out_km, apply_back_km, apply_income, apply_gl_subsidy, apply_cl_subsidy,
+    apply_jb_subsidy, apply_toll, apply_car_wash, apply_car_park, apply_car_water, apply_other_money,
+    apply_start_lm, apply_end_lm, apply_remark, apply_ed_zaizhong, apply_qy_id, apply_sx_pople,
+    apply_check_user_id, apply_check_yj, apply_check_time, apply_bz, yong_che_ren, yong_che_zhiwei,
+    yong_che_no, yong_che_xz, gps_km, xs_km, return_time, driverDDZT, currCheckPopleTime,
+    dispatchTime, currCheckPopleId, dispatchId, backId, apply_shenqingCar_type, apply_use_day,
+    apply_car_food, quxiao_time, start_longitude, start_latitude, end_longitude, end_latitude,
+    apply_fwzx_id, apply_convoy_id, day_price, halfDay_price, km_price, is_look, apply_ydyc_flag,
+    ydyc_check_flag, is_send, ramarkto, apply_stay, rejoin_time, audit_pass_time, audit_reject_time,
+    patcher_pass_time, patcher_reject_time, patcher_car_time, cancel_time, free_type,
+    printType, trip_type, old_apply_id, city_code, trip_content, syna_time
+        from mon_car_apply_info
+        where id = #{id};
+    </select>
+
+    <select id="queryMonCarBalanceInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarBalanceInfo" parameterType="java.lang.Integer">
+        select  id, daka_id, balance_state, balance_payment, balance_billing_state, balance_time,
+    city_code, old_id, syna_time
+        from mon_car_balance_info
+        where id = #{id};
+    </select>
+
+
+    <select id="queryMonCarDakaInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarDakaInfo" parameterType="java.lang.Integer">
+         select  id, driver_id, user_id, driver_money, user_money, dpet_id, car_id, daka_id, shoufei_time,
+    shoufei_time_, danjia_id, licheng, weizhang, is_flag, remark, car_address_daka, car_destination_daka,
+    car_youhao, yong_che_ren, fy_apply_id, feiyong, xiaoshi, jichu, fujia, xingshi_km,
+    feiyong_zhiyi, yong_che_times, city_code, old_id, syna_time
+        from mon_car_daka_info
+        where id = #{id};
+    </select>
+
+
+    <select id="queryMonCarInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarInfo" parameterType="java.lang.Integer">
+        select id, car_num, car_number, car_type, car_model, car_state, department_id, car_manufacturers,
+    car_milage, car_icon, car_tree_icon, car_color, car_capacity, past_time, add_time,
+    car_price, license_plate_color, car_login, img_name, img_save_name, is_flag, car_remark,
+    car_employState, car_seating, car_xsz, car_money, car_vin, car_pl, car_zg, car_zb,
+    car_ts, car_chegai, car_speed, car_guige_xinghao, car_xingzhi, car_zichankahao, car_youliao_type,
+    car_cj_number, car_fdj_number, car_baoyangT, chedui, serial_number, drive_mode, car_license_time,
+    power, oil_consumption, car_register_number, car_register_time, car_fdj_model, additional_tax_number,
+    scrap_time, safety_km, source_country, fuel_type, swerve_type, tyre_num, tyre_distance,
+    tyre_standard, axle_num, axle_distance, out_size, total_quality, get_type, leave_factory_time,
+    certificate_time, yearinspect_time, car_img_name, car_img_path, borrow_dept, skill_state,
+    wifi_num, syna_flag, city_code, old_id, syna_time
+        from mon_car_info
+        where id = #{id};
+    </select>
+
+
+    <select id="queryMonCarTypeInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonCarTypeInfo" parameterType="java.lang.Integer">
+      select id, car_type_name, seatNum,
+      picture_name
+        from mon_car_type_info
+        where id = #{id};
+    </select>
+
+    <select id="queryMonUserInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonUserInfo" parameterType="java.lang.Integer">
+       select id, user_name, user_past_time, user_pwd, user_type, user_state, user_dept_id, user_phone_login,
+    role_id, user_remark, user_sex, user_phone, user_address, user_num, is_type, user_img_name,
+    user_img_path, is_flag, user_car_cj, driverType, user_alertyear, user_is_cg, driver_img_name,
+    driver_ddimg_name, driver_phone_duanhao, driver_jiashizheng_date, driver_zhunjia,
+    driver_num_time, driver_time_num, vacate_id, vacate_num, drivercard_jieshu_time,
+    driver_niansheng, driver_age, driver_zjcx, driver_number, driver_check_time, driverFp,
+    driver_type, bianzhi, chedui, uname, sso_user_id, sf_no, csny_time, mz, jg, zzmm,
+    rdsj, hyzk, cjgzsj, jbdwsj, xqrzw, xl_q, xw_q, yx_zy_q, xl_z, xw_z, yx_zy_z, bz_sf,
+    dj_zw, fjszd, tbrq, ujstsettings, syna_flag, city_code, old_id, syna_time
+        from mon_user_info
+        where id = #{id};
+    </select>
+
+    <select id="queryMonOperationInfo" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonOperationInfo" parameterType="java.lang.Integer" >
+        select *
+        from mon_operation_info
+        order by id asc
+        limit 50
+    </select>
+
+    <select id="queryMonDepartmentInfoByID" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsql.po.MonDepartmentInfo" parameterType="java.lang.Integer" >
+        select id, dept_name, dept_type,
+      dept_super_id, dept_desc, dept_lat,
+      dept_lon, dept_adress, is_flag,
+      dapt_remark, gs_id, pt_id,
+      fw_type, dept_super_ids, name,
+      color, qy_id, orgcoding,
+      orgallname, dept_flag, dept_number,
+      syna_time, syna_flag, geo
+        from mon_department_info
+          where id = #{id}
+    </select>
+
+    <delete id="deleteMonOperationInfoByID"  parameterType="java.lang.Integer">
+        delete
+        from mon_operation_info
+        where id = #{id}
+    </delete>
+
+</mapper>
