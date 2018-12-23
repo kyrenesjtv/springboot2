@@ -42,6 +42,9 @@
 
 
     <contextName>xcloud-print</contextName>
+    <!-- 日志输出到tomcatlog  -->
+    <!--<subsitutionProperty name="APPL_ROOT" value="${catalina.base}}" />-->
+    <!--<property name="LOG_PATH" value="/logs" />-->
     <property name="LOG_PATH" value="d://xcloud-print-logs" />
     <!--设置系统日志目录-->
     <property name="APPDIR" value="logs" />
