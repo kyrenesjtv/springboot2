@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.kyrenesjtv.springboot2.springboot2_withsecurity.springboot2_withsecurity.DAO.RoleDAO">
+
+    <select id="listAllRoleFunction" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsecurity.springboot2_withsecurity.entity.po.RoleFunctionPO">
+        select gf.address as functionAddress , gr.name as roleName
+        from global_role_function grf
+        left join global_function gf on gf.id = grf.functionId
+        left join global_role gr on gr.id = grf.roleId
+    </select>
+
+
+    <select id="listRolesByUserId" resultType="com.github.kyrenesjtv.springboot2.springboot2_withsecurity.springboot2_withsecurity.entity.po.RolePO">
+        select  gr.id,gr.createDate,gr.createrName,gr.name ,gr.remarks ,gr.sort , gr.state
+        from global_role gr
+        left join global_roleuser gru on gru.roleId = gr.id
+        where gru.userId = #{userId}
+    </select>
+
+
+</mapper>
